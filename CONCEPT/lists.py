@@ -317,7 +317,7 @@ print("Student records using zip:", student_records)
 for name, score, subject in zip(names, scores, subjects):
     print(f"Name: {name}, Score: {score}, Subject: {subject}")
 
-# CONCEPT: enumerate()
+# CONCEPT: enumerate(iterable, start=0(Default))
 # --------------------
 # The enumerate() function adds a counter (index) to an iterable and returns it as an enumerate object.
 # Useful for getting both the index and the value when looping through a list.
