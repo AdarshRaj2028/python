@@ -1,0 +1,35 @@
+import json
+questions = [
+    {
+    "question": "In version control with Git, what is the command to create a new branch and switch to it in a single step?",
+    "options":[
+      "git branch <branch-name>",
+      "git new <branch-name>",
+      "git checkout -b <branch-name>",
+      "git commit -b <branch-name>"
+    ],
+    "answer": 3
+    },
+    {
+    "question": "Which HTTP status code indicates that a request has succeeded?",
+    "options": [
+      "404 Not Found",
+      "200 OK",
+      "500 Internal Server Error",
+      "301 Moved Permanently"
+    ],
+    "answer": "200 OK"
+  },
+  {
+    "question": "Which of the following Python data structures is immutable, meaning its contents cannot be changed after creation?",
+    "options": [
+      "list",
+      "dictionary",
+      "set",
+      "tuple"
+    ],
+    "answer": "tuple"
+  },
+]
+with open("question_for_quiz.json", "w", encoding="utf-8") as file:
+    questions_quiz = json.dump(questions, file, indent=4)
