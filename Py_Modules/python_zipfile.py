@@ -46,6 +46,9 @@ COMPRESSION METHODS:
 - zipfile.ZIP_BZIP2     : High compression using bzip2 (slower, smaller files)
 - zipfile.ZIP_LZMA      : Highest compression using LZMA (slowest, smallest files)
 
+If you don't specify a compression method when creating a ZIP file with the zipfile module, Python will use the default behavior.
+Python defaults to zipfile.ZIP_STORED - which means no compression at all.
+
 ZIPFILE MODES:
 - 'r'  : Read existing ZIP file
 - 'w'  : Write new ZIP file (overwrites if exists)
