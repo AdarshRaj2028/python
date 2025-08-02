@@ -65,3 +65,11 @@ print(myset1.intersection(myset2))
 print(myset1.symmetric_difference(myset2))
 # myset1.add(10)
 
+# Sets Comprehension
+print("\n***Sets Comprehension***\n")
+myset3 = {x for x in range(10) if x % 2 == 0}
+print("Sets of even numbers:", myset3)
+
+nums = [1, 1, 2, 2, 3, 3, 4, 5]
+myset2 = {x ** 2 for x in nums}
+print("\nSets of unique sqaures:", myset2, "\n")
