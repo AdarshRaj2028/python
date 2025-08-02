@@ -110,6 +110,7 @@ print("All (Key, Value) Pairs:", info.items())
 pairs_list = list(info.items())
 print("\nItems as a list of tuples:", pairs_list)
 print("First pair from the list:", pairs_list[0])
+print("Getting a nested value from the list('y' from python):", pairs_list[4][1][1][1])
 
 
 # ---------------------------------
@@ -154,9 +155,16 @@ for p_id, p_info in people.items():  # p_id = key and p_info = value
 # The double asterisk (**) is also an unpacking operator, like *, 
 # but it works specifically with dictionaries and keyword arguments
 
-squares = {2: 23, **{x: x * x for x in range(6)}}
 print("\n--- 7. Dictionary from Comprehension ---")
-print(squares)
+squares = {2: 23, **{x: x * x for x in range(6)}}
+print(f"Dictionary of squares while overwriting (2: 23): {squares}")
+
+squares_1 = {x: x * x for x in range(6)}
+print(f"Dictionary of squares: {squares_1}")
+
+pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four'), (5, 'five')]
+dict = {key: value for key, value in pairs}
+print("Dictionary from pairs:", dict)
 
 
 # ---------------------------------
