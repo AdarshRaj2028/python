@@ -158,3 +158,18 @@ def reverse_string(my_string):
 
 for char in reverse_string("REDRUM"):
     print(char)
+
+print()
+
+# Generator comprehension
+
+squares = (x**2 for x in range(5))
+print(next(squares))
+print(next(squares))
+print(next(squares))
+print(next(squares))
+print(next(squares))
+print()
+
+sum_of_squares = sum(x**2 for x in range(100000))
+print(sum_of_squares)
