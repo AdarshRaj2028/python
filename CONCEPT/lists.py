@@ -182,25 +182,40 @@ print("Length of sample_list:", len(sample_list))
 print("\n--- 9. List Comprehensions ---")
 
 # Create a list of squares using comprehension
-squares = [x**2 for x in range(1, 6)]
+squares = [x**2 for x in range(1, 6)] 
 print("\nSquares using comprehension:", squares)
 
-# If with list comprehension
-number_list = [ x for x in range(20) if x % 2 == 0]
-print("\n",number_list)
-
 # Nested If with list comprehension
-num_list = [ y for y in range(100) if y % 2 == 0 if y % 5 == 0]
-print("\n",num_list)
+num_list = [ y 
+            for y in range(100) 
+            if y % 2 == 0 
+            if y % 5 == 0]
+
+print("\nEven numbers divisible by 5 using comprehension: ",num_list)
 
 # If...Else with list comprehension
-obj = ["Even" if i % 2 == 0 else "Odd" for i in range(10)]
-print("\n", obj ,"\n")
+obj = ["Even" 
+       if i % 2 == 0 
+       else "Odd" 
+       for i in range(10)]
+
+print("\nEven or Odd using comprehension: ", obj)
 
 # Filter even numbers using comprehension
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-even_numbers = [x for x in numbers if x % 2 == 0]
-print("\nEven numbers:", even_numbers, "\n")
+even_numbers = [x 
+                for x in numbers 
+                if x % 2 == 0]
+
+print("\nEven numbers using comprehension: ", even_numbers)
+
+# Multiple List comprehension -> (Flattening a matrix (list of lists))
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened = [num 
+            for row in matrix 
+            for num in row]
+
+print("\nFlattened matrix:", flattened)
 
 """
 =============================================================================
