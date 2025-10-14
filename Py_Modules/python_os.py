@@ -39,7 +39,8 @@ r"""
     Same as rename, but will overwrite dst if exists.
 
 - os.scandir(path='.')
-    Returns an iterator of os.DirEntry objects, more efficient than os.listdir for large directories. Each DirEntry has attributes like .name, .path, .is_file(), .is_dir().
+    Returns an iterator of os.DirEntry objects, more efficient than os.listdir for large directories. 
+    Each DirEntry has attributes like .name, .path, .is_file(), .is_dir().
 
 --- PATH OPERATIONS (os.path submodule) ---
 - os.path.join(path1, path2, ...)
@@ -129,8 +130,10 @@ import os
 # 1. Storing per-user app files: Example (TO-DO APPLICATION)
 #    This ensures the data persists for each user and is NOT lost or inaccessible when distributed as an EXE.
 
-APPDATA_DIR = os.path.join(os.path.expanduser("~"), ".todo_app")  # Hidden on Unix, visible folder on Windows
+APPDATA_DIR = os.path.join(os.path.expanduser("~"), ".todo_app")  # Hidden on Unix, visible folder on Windows. APPDATA on Windows, and it's a constant.
 os.makedirs(APPDATA_DIR, exist_ok=True)   # Make sure it and parent folders exist (does nothing if exists)
+
+# Expanduser will create the file in C:\Users\username\.todo_app which will contain the file, and contents written below
 
 FILEPATH_TODO = os.path.join(APPDATA_DIR, "todo_list.txt")
 FILEPATH_COMPLETED_TODO = os.path.join(APPDATA_DIR, "completed_todo_list.txt")
@@ -142,6 +145,8 @@ print("Wrote TODO to:", FILEPATH_TODO)
 
 with open(FILEPATH_TODO, 'r') as f:
     print("Contents of TODO file:", f.read())
+
+print()
 
 # 2. Usual directory/file examples...
 cwd = os.getcwd()
